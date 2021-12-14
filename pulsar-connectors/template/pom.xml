@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${parent.artifactId}-template</artifactId>
+  <artifactId>${project.parent.artifactId}-template</artifactId>
   <name>Template for 3rd Party Connectors</name>
   <dependencies>
     <dependency>

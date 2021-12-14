@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${parent.artifactId}-neoj4</artifactId>
+  <artifactId>${project.parent.artifactId}-neoj4</artifactId>
   <name>Neo4J Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

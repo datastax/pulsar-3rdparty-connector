@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${parent.artifactId}-datadog</artifactId>
+  <artifactId>${project.parent.artifactId}-datadog</artifactId>
   <name>DataDog Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>
