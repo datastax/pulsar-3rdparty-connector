@@ -35,6 +35,8 @@
     <module>pulsar-connectors</module>
   </modules>
   <properties>
+    <!-- org.apache.pulsar (and matching pulsar.version) fro OSS -->
+    <pulsar.distribution-name>com.datastax.oss</pulsar.distribution-name>
     <!--
     Versions matching pulsar 2.9-snapshot
     -->
@@ -52,7 +54,7 @@
     <skipSourceReleaseAssembly>false</skipSourceReleaseAssembly>
     <shadePluginPhase>package</shadePluginPhase>
     <narPluginPhase>package</narPluginPhase>
-    <pulsar.version>2.8.0.1.1.5</pulsar.version>
+    <pulsar.version>2.8.0.1.1.9</pulsar.version>
     <commons-compress.version>1.21</commons-compress.version>
     <bookkeeper.version>4.14.2</bookkeeper.version>
     <zookeeper.version>3.6.3</zookeeper.version>
@@ -1336,22 +1338,12 @@ limitations under the License.]]></inlineHeader>
     </repository>
     <repository>
       <id>datastax-releases</id>
-      <url>https://repo.sjc.dsinternal.org/artifactory/datastax-releases-local</url>
+      <url>https://repo.datastax.com/artifactory/datastax-public-releases-local</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
       <releases>
         <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>datastax-snapshots-local</id>
-      <url>https://repo.sjc.dsinternal.org/artifactory/datastax-snapshots-local</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
       </releases>
     </repository>
     <!--

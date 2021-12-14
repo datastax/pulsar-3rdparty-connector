@@ -32,7 +32,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.pulsar</groupId>
+      <groupId>${pulsar.distribution-name}</groupId>
       <artifactId>pulsar-io-kafka-connect-adaptor</artifactId>
       <version>${pulsar.version}</version>
       <exclusions>
