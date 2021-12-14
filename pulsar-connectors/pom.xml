@@ -32,6 +32,7 @@
     <module>neo4j</module>
     <module>datadog</module>
     <module>couchbase</module>
+    <module>phoenix</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
