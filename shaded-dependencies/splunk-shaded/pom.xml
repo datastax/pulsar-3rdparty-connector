@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright DataStax, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.datastax.oss</groupId>
+    <artifactId>shaded-dependencies</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>splunk-shaded</artifactId>
+  <name>Shaded Splunk Kafka Connector</name>
+  <properties>
+    <dep.groupId>com.github.splunk</dep.groupId>
+    <dep.artifactId>kafka-connect-splunk</dep.artifactId>
+    <dep.version>v2.0.3</dep.version>
+  </properties>
+  <dependencies>
+    <!-- dependency to shade -->
+    <dependency>
+      <groupId>${dep.groupId}</groupId>
+      <artifactId>${dep.artifactId}</artifactId>
+      <version>${dep.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <createDependencyReducedPom>true</createDependencyReducedPom>
+          <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+          <shadeSourcesContent>true</shadeSourcesContent>
+          <artifactSet>
+            <includes>
+              <include>${dep.groupId}:*</include>
+            </includes>
+          </artifactSet>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+              </excludes>
+            </filter>
+          </filters>
+          <!--
+          Relocating conflicting dependencies packaged as an uber jar.
+          Excluding classes used by
+          org.apache.pulsar:pulsar-io-kafka-connect-adaptor and thus
+          bringing a risk of unexpected runtime behavior.
+          -->
+          <relocations>
+            <relocation>
+              <pattern>javax</pattern>
+              <shadedPattern>shaded.javax</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.glassfish</pattern>
+              <shadedPattern>shaded.org.glassfish</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.eclipse</pattern>
+              <shadedPattern>shaded.org.eclipse</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>com.fasterxml</pattern>
+              <shadedPattern>shaded.com.fasterxml</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>com.google</pattern>
+              <shadedPattern>shaded.com.google</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.apache</pattern>
+              <shadedPattern>shaded.org.apache</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.asynchttpclient</pattern>
+              <shadedPattern>shaded.org.asynchttpclient</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.lz4</pattern>
+              <shadedPattern>shaded.org.lz4</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>org.slf4j</pattern>
+              <shadedPattern>shaded.org.slf4j</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>io.netty</pattern>
+              <shadedPattern>shaded.io.netty</shadedPattern>
+            </relocation>
+            <relocation>
+              <pattern>net.sf</pattern>
+              <shadedPattern>shaded.net.sf</shadedPattern>
+            </relocation>
+          </relocations>
+          <transformers>
+            <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+            <transformer implementation="org.apache.maven.plugins.shade.resource.PluginXmlResourceTransformer"/>
+          </transformers>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
