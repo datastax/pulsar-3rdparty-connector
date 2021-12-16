@@ -39,6 +39,7 @@
     <module>marklogic</module>
     <module>singlestore</module>
     <module>sap-hana</module>
+    <module>hazelcast</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
