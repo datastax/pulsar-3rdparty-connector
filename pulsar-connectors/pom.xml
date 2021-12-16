@@ -36,6 +36,7 @@
     <module>orientdb</module>
     <module>redis</module>
     <module>newrelic</module>
+    <module>marklogic</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
