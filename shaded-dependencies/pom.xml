@@ -28,6 +28,7 @@
   <name>3rd Party :: Shaded Dependencies</name>
   <modules>
     <module>splunk-shaded</module>
+    <module>redis-shaded</module>
     <!-- add new modules here -->
   </modules>
 </project>

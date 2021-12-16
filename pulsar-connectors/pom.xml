@@ -34,6 +34,7 @@
     <module>couchbase</module>
     <module>phoenix</module>
     <module>orientdb</module>
+    <module>redis</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
