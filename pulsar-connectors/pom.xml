@@ -37,6 +37,7 @@
     <module>redis</module>
     <module>newrelic</module>
     <module>marklogic</module>
+    <module>singlestore</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
