@@ -35,6 +35,7 @@
     <module>phoenix</module>
     <module>orientdb</module>
     <module>redis</module>
+    <module>newrelic</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
