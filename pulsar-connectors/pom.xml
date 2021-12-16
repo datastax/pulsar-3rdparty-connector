@@ -33,6 +33,7 @@
     <module>datadog</module>
     <module>couchbase</module>
     <module>phoenix</module>
+    <module>orientdb</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
