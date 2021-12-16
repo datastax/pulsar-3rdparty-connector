@@ -51,9 +51,6 @@
       <artifactId>kafka-connect-couchbase</artifactId>
       <version>4.1.4</version>
     </dependency>
-    <!--
-    insert 3rd party connector dependency here
-    -->
   </dependencies>
   <build>
     <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
