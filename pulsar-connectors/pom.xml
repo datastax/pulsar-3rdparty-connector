@@ -40,6 +40,7 @@
     <module>singlestore</module>
     <module>sap-hana</module>
     <module>hazelcast</module>
+    <module>zeebe</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
