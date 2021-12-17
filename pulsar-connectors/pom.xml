@@ -27,7 +27,7 @@
   <artifactId>pulsar-connectors</artifactId>
   <name>3rd Party :: Pulsar Connectors</name>
   <modules>
-    <module>kafka-connect-bigquery</module>
+    <module>bigquery</module>
     <module>splunk</module>
     <module>neo4j</module>
     <module>datadog</module>
