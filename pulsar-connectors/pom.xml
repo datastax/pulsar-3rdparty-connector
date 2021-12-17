@@ -42,6 +42,7 @@
     <module>hazelcast</module>
     <module>zeebe</module>
     <module>xtdb</module>
+    <module>diffusion</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
