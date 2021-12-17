@@ -46,6 +46,7 @@
     <module>kinetica</module>
     <module>humio</module>
     <module>geode</module>
+    <module>plc4x</module>
     <!-- add new connector modules here -->
   </modules>
 </project>

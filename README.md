@@ -37,6 +37,7 @@ Added connectors, so far:
 * [New Relic](pulsar-connectors/newrelic/)
 * [OrientDB](pulsar-connectors/orientdb/)
 * [Apache Phoenix](pulsar-connectors/phoenix/)
+* [Apache PLC4X](pulsar-connectors/plc4x/)
 * [Redis](pulsar-connectors/redis/)
 * [SAP HANA](pulsar-connectors/sap-hana/)
 * [SingleStore](pulsar-connectors/singlestore/)
