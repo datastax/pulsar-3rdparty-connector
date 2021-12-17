@@ -29,6 +29,7 @@ Added connectors, so far:
 * [DataDog Logs](pulsar-connectors/datadog/)
 * [Diffusion](pulsar-connectors/diffusion/)
 * [Hazelcast Jet](pulsar-connectors/hazelcast/)
+* [Humio HEC](pulsar-connectors/humio/)
 * [Kinetica](pulsar-connectors/kinetica/)
 * [MarkLogic](pulsar-connectors/marklogic/)
 * [Neo4J](pulsar-connectors/neo4j/)

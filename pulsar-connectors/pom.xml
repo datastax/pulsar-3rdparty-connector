@@ -44,6 +44,7 @@
     <module>xtdb</module>
     <module>diffusion</module>
     <module>kinetica</module>
+    <module>humio</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
