@@ -1333,6 +1333,13 @@ limitations under the License.]]></inlineHeader>
       </snapshots>
     </repository>
     <repository>
+      <id>kinetica</id>
+      <url>https://files.kinetica.com/nexus/content/repositories/releases/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>datastax-releases</id>
       <url>https://repo.datastax.com/artifactory/datastax-public-releases-local</url>
       <snapshots>

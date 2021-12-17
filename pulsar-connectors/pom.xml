@@ -43,6 +43,7 @@
     <module>zeebe</module>
     <module>xtdb</module>
     <module>diffusion</module>
+    <module>kinetica</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
