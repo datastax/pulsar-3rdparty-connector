@@ -24,6 +24,7 @@ For the details of the status of the specific connector and available connectors
 
 Added connectors, so far:
 
+* [Apache Geode](pulsar-connectors/geode/)
 * [Google BigQuery](pulsar-connectors/bigquery/)
 * [Couchbase](pulsar-connectors/couchbase/)
 * [DataDog Logs](pulsar-connectors/datadog/)

@@ -45,6 +45,7 @@
     <module>diffusion</module>
     <module>kinetica</module>
     <module>humio</module>
+    <module>geode</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
