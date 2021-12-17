@@ -41,6 +41,7 @@
     <module>sap-hana</module>
     <module>hazelcast</module>
     <module>zeebe</module>
+    <module>xtdb</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
