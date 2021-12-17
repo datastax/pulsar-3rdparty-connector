@@ -22,6 +22,26 @@ The connectors built with this project require Datastax Pulsar Luna 2.8+ or Apac
 For the details of the status of the specific connector and available connectors, navigate to 
 `pulsar-connector/<connector name>` and check the readme provided by the contributor.
 
+Added connectors, so far:
+
+* [Google BigQuery](pulsar-connectors/bigquery/)
+* [Couchbase](pulsar-connectors/couchbase/)
+* [DataDog Logs](pulsar-connectors/datadog/)
+* [Diffusion](pulsar-connectors/diffusion/)
+* [Hazelcast Jet](pulsar-connectors/hazelcast/)
+* [Kinetica](pulsar-connectors/kinetica/)
+* [MarkLogic](pulsar-connectors/marklogic/)
+* [Neo4J](pulsar-connectors/neo4j/)
+* [New Relic](pulsar-connectors/newrelic/)
+* [OrientDB](pulsar-connectors/orientdb/)
+* [Apache Phoenix](pulsar-connectors/phoenix/)
+* [Redis](pulsar-connectors/redis/)
+* [SAP HANA](pulsar-connectors/sap-hana/)
+* [SingleStore](pulsar-connectors/singlestore/)
+* [Splunk](pulsar-connectors/splunk/)
+* [XTDB](pulsar-connectors/xtdb/)
+* [Zeebe](pulsar-connectors/zeebe/)
+
 The rest of this documentation will dive into details of:
 * how to build the connectors
 * how to use the connectors
