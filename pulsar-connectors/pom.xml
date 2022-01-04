@@ -50,6 +50,7 @@
     <module>azure-documentdb</module>
     <module>coap</module>
     <module>mqtt</module>
+    <module>kudu</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
