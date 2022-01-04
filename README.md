@@ -3,12 +3,10 @@
 This project provides simple templates and instructions to build Apache Pulsar connectors on base of the
 existing Apache Kafka connectors. 
 
-Apache Pulsar's high quality bar for the connectors is a blessing and a curse.
-On one side, one using the connector is assured that a certain level of integration testing 
-is done for each release. On another side, it requires a developer brave and experienced enough 
-to contribute the connector and required integration tests.
+Apache Pulsar's acceptance criteria for the connectors requires a developer brave and experienced enough 
+with both Pulsar and the 3rd-party system to contribute the connector and required integration tests.
 
-This project relaxes initial quality guarantees to allow people to move the connectors 
+This project relaxes the criteria to allow people to faster move the connectors 
 they used with their Apache Kafka infrastructure into the Apache Pulsar's and incrementally work on improvements.
 
 The project uses Apache Pulsar's Kafka Connect Adaptor (KCA). One can find more information about KCA in 
@@ -24,26 +22,26 @@ For the details of the status of the specific connector and available connectors
 
 Added connectors, so far:
 
-* [Apache Geode](pulsar-connectors/geode/)
-* [Google BigQuery](pulsar-connectors/bigquery/)
-* [Couchbase](pulsar-connectors/couchbase/)
-* [DataDog Logs](pulsar-connectors/datadog/)
-* [Diffusion](pulsar-connectors/diffusion/)
-* [Hazelcast Jet](pulsar-connectors/hazelcast/)
-* [Humio HEC](pulsar-connectors/humio/)
-* [Kinetica](pulsar-connectors/kinetica/)
-* [MarkLogic](pulsar-connectors/marklogic/)
-* [Neo4J](pulsar-connectors/neo4j/)
-* [New Relic](pulsar-connectors/newrelic/)
-* [OrientDB](pulsar-connectors/orientdb/)
-* [Apache Phoenix](pulsar-connectors/phoenix/)
-* [Apache PLC4X](pulsar-connectors/plc4x/)
-* [Redis](pulsar-connectors/redis/)
-* [SAP HANA](pulsar-connectors/sap-hana/)
-* [SingleStore](pulsar-connectors/singlestore/)
-* [Splunk](pulsar-connectors/splunk/)
-* [XTDB](pulsar-connectors/xtdb/)
-* [Zeebe](pulsar-connectors/zeebe/)
+1. [Apache Geode](pulsar-connectors/geode/)
+2. [Apache Phoenix](pulsar-connectors/phoenix/)
+3. [Apache PLC4X](pulsar-connectors/plc4x/)
+4. [Couchbase](pulsar-connectors/couchbase/)
+5. [DataDog Logs](pulsar-connectors/datadog/)
+6. [Diffusion](pulsar-connectors/diffusion/)
+7. [Google BigQuery](pulsar-connectors/bigquery/)
+8. [Hazelcast Jet](pulsar-connectors/hazelcast/)
+9. [Humio HEC](pulsar-connectors/humio/)
+10. [Kinetica](pulsar-connectors/kinetica/)
+11. [MarkLogic](pulsar-connectors/marklogic/)
+12. [Neo4J](pulsar-connectors/neo4j/)
+13. [New Relic](pulsar-connectors/newrelic/)
+14. [OrientDB](pulsar-connectors/orientdb/)
+15. [Redis](pulsar-connectors/redis/)
+16. [SAP HANA](pulsar-connectors/sap-hana/)
+17. [SingleStore](pulsar-connectors/singlestore/)
+18. [Splunk](pulsar-connectors/splunk/)
+19. [XTDB](pulsar-connectors/xtdb/)
+20. [Zeebe](pulsar-connectors/zeebe/)
 
 The rest of this documentation will dive into details of:
 * how to build the connectors
