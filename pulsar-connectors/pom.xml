@@ -48,6 +48,7 @@
     <module>geode</module>
     <module>plc4x</module>
     <module>azure-documentdb</module>
+    <module>coap</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
