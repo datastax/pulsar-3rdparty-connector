@@ -49,6 +49,7 @@
     <module>plc4x</module>
     <module>azure-documentdb</module>
     <module>coap</module>
+    <module>mqtt</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
