@@ -27,30 +27,31 @@
   <artifactId>pulsar-connectors</artifactId>
   <name>3rd Party :: Pulsar Connectors</name>
   <modules>
-    <module>bigquery</module>
-    <module>splunk</module>
-    <module>neo4j</module>
-    <module>datadog</module>
-    <module>couchbase</module>
-    <module>phoenix</module>
-    <module>orientdb</module>
-    <module>redis</module>
-    <module>newrelic</module>
-    <module>marklogic</module>
-    <module>singlestore</module>
-    <module>sap-hana</module>
-    <module>hazelcast</module>
-    <module>zeebe</module>
-    <module>xtdb</module>
-    <module>diffusion</module>
-    <module>kinetica</module>
-    <module>humio</module>
-    <module>geode</module>
-    <module>plc4x</module>
     <module>azure-documentdb</module>
+    <module>bigquery</module>
     <module>coap</module>
-    <module>mqtt</module>
+    <module>couchbase</module>
+    <module>datadog</module>
+    <module>diffusion</module>
+    <module>geode</module>
+    <module>hazelcast</module>
+    <module>humio</module>
+    <module>jms</module>
+    <module>kinetica</module>
     <module>kudu</module>
+    <module>marklogic</module>
+    <module>mqtt</module>
+    <module>neo4j</module>
+    <module>newrelic</module>
+    <module>orientdb</module>
+    <module>phoenix</module>
+    <module>plc4x</module>
+    <module>redis</module>
+    <module>sap-hana</module>
+    <module>singlestore</module>
+    <module>splunk</module>
+    <module>xtdb</module>
+    <module>zeebe</module>
     <!-- add new connector modules here -->
   </modules>
 </project>
