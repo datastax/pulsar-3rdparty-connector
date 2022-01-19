@@ -1,17 +1,17 @@
-# 3rd Party connectors for Apache Pulsar
+# Third Party connectors for Apache Pulsar
 
-This project provides simple templates and instructions to build Apache Pulsar connectors on base of the
+This project provides simple templates and instructions to build Apache Pulsar connectors on the base of 
 existing Apache Kafka connectors. 
 
-Apache Pulsar's acceptance criteria for the connectors requires a developer brave and experienced enough 
-with both Pulsar and the 3rd-party system to contribute the connector and required integration tests.
+Apache Pulsar's current acceptance criteria for connectors requires a developer brave and experienced enough 
+with both Pulsar and third party systems to contribute the connector and required integration tests.
 
-This project relaxes the criteria to allow people to faster move the connectors 
-they used with their Apache Kafka infrastructure into the Apache Pulsar's and incrementally work on improvements.
+This project relaxes the criteria to allow developers to quickly move connectors
+they used with their Apache Kafka infrastructure into Apache Pulsar's, and incrementally work on improvements.
 
-The project uses Apache Pulsar's Kafka Connect Adaptor (KCA). One can find more information about KCA in 
+The project uses Apache Pulsar's Kafka Connect Adaptor (KCA). More information about KCA is available in 
 [this blog post](https://www.datastax.com/blog/simplify-migrating-kafka-to-pulsar-kafka-connect-support).
-KCA is used for such popular Pulsar's connector's as 
+KCA is used for such popular Pulsar connectors as 
 [Pulsar Debezium Source Connectors](https://github.com/apache/pulsar/tree/master/pulsar-io/debezium) and
 [Pulsar Snowflake Sink Connector](https://github.com/datastax/snowflake-connector).
 
@@ -49,27 +49,28 @@ Added connectors, so far:
 25. [Zeebe](pulsar-connectors/zeebe)
 
 The rest of this documentation will dive into details of:
-* how to build the connectors
-* how to use the connectors
-* how to add a connector
+
+* How to build connectors
+* How to use connectors
+* How to add a connector
 
 ## Building the connectors
 
-Make sure you have JDK 11+ and maven 3.8 installed.
+Ensure you have JDK 11+ and Maven 3.8 installed.
 
-Clone the repo and run `mvn clean install` from the root. 
+Clone the connector's repo and run `mvn clean install` from the root. 
 
-The connectors' `.nar` files can be found at `pulsar-connectors/<connector name>>/target/pulsar-3rdparty-pulsar-connectors-<connector name>-0.1.0-SNAPSHOT.nar`
+The connector's `.nar` files can be found at `pulsar-connectors/<connector name>>/target/pulsar-3rdparty-pulsar-connectors-<connector name>-0.1.0-SNAPSHOT.nar`
 
 ## Using the connectors
 
-Follow regular Pulsar's steps to use the packaged connector: https://pulsar.apache.org/docs/en/io-use/ 
+Follow [Pulsar's documentation](https://pulsar.apache.org/docs/en/io-use/) to use the packaged connector.
 
-### Providing configuration for the connector
+### Providing configuration for connectors
 
 #### Sink Connectors
 
-Follow the example below to create config yaml file: 
+Follow the example below to create a config yaml file: 
 
 ```yaml
 # Pulsar KCA Sink expects "processingGuarantees" to be "EFFECTIVELY_ONCE"`
@@ -100,7 +101,7 @@ configs:
 
 #### Source Connectors
 
-Follow the example below to create config yaml file:
+Follow the example below to create a config yaml file:
 
 ```yaml
 tenant: "public"
@@ -134,30 +135,28 @@ configs:
 
 ## Adding a new connector
 
-These steps help avoid some common problems that one can encounter while using KCA to create a new connector:
-* make sure the connector's license allows its use and redistribution. Helpful starting point is https://www.apache.org/legal/resolved.html
-* maven dependency conflict of transitive dependencies in build time 
-* dependency conflict in runtime caused by third-party dependencies packaged with the connector 
+These steps help avoid some common problems encountered while using KCA to create a new connector:
+
+* Ensure the connector's license allows its use and redistribution. A helpful starting point is [here](https://www.apache.org/legal/resolved.html).  
+* Maven dependency conflict of transitive dependencies in build time.
+* Dependency conflict in runtime caused by third-party dependencies packaged with the connector.
 
 ### 1. Decide if you need to shade the original connector
 
-Check the content of the Kafka connector's jar file. In case it includes third-party dependencies 
+Check the content of the Kafka connector's jar file. If it includes third-party dependencies, 
 you may need to "shade" it (rename some classes).
 
 To do so, copy `shaded-dependencies/template-shaded/` to `shaded-dependencies/<connector name>` 
-and change its `pom.xml`, add new module into `shaded-dependencies/pom.xml`.
+and add the new module into `shaded-dependencies/pom.xml`.
 
-Build (`mvn clean install`) and make sure that third-party dependencies renamed as specified 
-in `shaded-dependencies/<connector name>/pom.xml`.
+Ensure that third-party dependencies are renamed as specified 
+in `shaded-dependencies/<connector name>/pom.xml`and build (`mvn clean install`).
 
 ### 2. Add new subproject
 
-Copy `pulsar-connectors/template/` to `pulsar-connectors/<connector name>/` and change its `pom.xml`,
-add new module into `pulsar-connectors/pom.xml`.
+Copy `pulsar-connectors/template/` to `pulsar-connectors/<connector name>/`, and add the new module into `pulsar-connectors/pom.xml`.
 
 Update the `pulsar-connectors/<connector name>/README.md`.
 
-Build (`mvn clean install`), resolve build problems as needed. 
-
-Run ` mvn dependency:tree -Dverbose` and review how maven auto-resolved potential dependency conflicts, fix as needed.
+Build (`mvn clean install`). Run ` mvn dependency:tree -Dverbose` to review how Maven auto-resolved potential dependency conflicts and fix as needed.
 
