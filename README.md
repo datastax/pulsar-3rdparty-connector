@@ -156,6 +156,8 @@ in `shaded-dependencies/<connector name>/pom.xml`and build (`mvn clean install`)
 
 Copy `pulsar-connectors/template/` to `pulsar-connectors/<connector name>/`, and add the new module into `pulsar-connectors/pom.xml`.
 
+Update connector's name and description in `pulsar-connectors/<connector name>/src/main/resources/META-INF/services/pulsar-io.yaml`
+
 Update the `pulsar-connectors/<connector name>/README.md`.
 
 Build (`mvn clean install`). Run ` mvn dependency:tree -Dverbose` to review how Maven auto-resolved potential dependency conflicts and fix as needed.
