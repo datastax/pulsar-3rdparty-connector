@@ -22,31 +22,32 @@ For the details of the status of the specific connector and available connectors
 
 Added connectors, so far:
 
-1. [Azure DocumentDB](pulsar-connectors/azure-documentdb)
-2. [Apache Geode](pulsar-connectors/geode)
-3. [Apache Kudu](pulsar-connectors/kudu)
-4. [Apache Phoenix](pulsar-connectors/phoenix)
-5. [Apache PLC4X](pulsar-connectors/plc4x)
-6. [CoAP](pulsar-connectors/coap)
-7. [Couchbase](pulsar-connectors/couchbase)
-8. [DataDog Logs](pulsar-connectors/datadog)
-9. [Diffusion](pulsar-connectors/diffusion)
-10. [Google BigQuery](pulsar-connectors/bigquery)
-11. [Hazelcast Jet](pulsar-connectors/hazelcast)
-12. [Humio HEC](pulsar-connectors/humio)
-13. [JMS](pulsar-connectors/jms)
-14. [Kinetica](pulsar-connectors/kinetica)
-15. [MarkLogic](pulsar-connectors/marklogic)
-16. [MQTT](pulsar-connectors/mqtt)
-17. [Neo4J](pulsar-connectors/neo4j)
-18. [New Relic](pulsar-connectors/newrelic)
-19. [OrientDB](pulsar-connectors/orientdb)
-20. [Redis](pulsar-connectors/redis)
-21. [SAP HANA](pulsar-connectors/sap-hana)
-22. [SingleStore](pulsar-connectors/singlestore)
-23. [Splunk](pulsar-connectors/splunk)
-24. [XTDB](pulsar-connectors/xtdb)
-25. [Zeebe](pulsar-connectors/zeebe)
+1. [Azure Data Explorer (Kusto)](pulsar-connectors/azure-kusto)
+2. [Azure DocumentDB](pulsar-connectors/azure-documentdb)
+3. [Apache Geode](pulsar-connectors/geode)
+4. [Apache Kudu](pulsar-connectors/kudu)
+5. [Apache Phoenix](pulsar-connectors/phoenix)
+6. [Apache PLC4X](pulsar-connectors/plc4x)
+7. [CoAP](pulsar-connectors/coap)
+8. [Couchbase](pulsar-connectors/couchbase)
+9. [DataDog Logs](pulsar-connectors/datadog)
+10. [Diffusion](pulsar-connectors/diffusion)
+11. [Google BigQuery](pulsar-connectors/bigquery)
+12. [Hazelcast Jet](pulsar-connectors/hazelcast)
+13. [Humio HEC](pulsar-connectors/humio)
+14. [JMS](pulsar-connectors/jms)
+15. [Kinetica](pulsar-connectors/kinetica)
+16. [MarkLogic](pulsar-connectors/marklogic)
+17. [MQTT](pulsar-connectors/mqtt)
+18. [Neo4J](pulsar-connectors/neo4j)
+19. [New Relic](pulsar-connectors/newrelic)
+20. [OrientDB](pulsar-connectors/orientdb)
+21. [Redis](pulsar-connectors/redis)
+22. [SAP HANA](pulsar-connectors/sap-hana)
+23. [SingleStore](pulsar-connectors/singlestore)
+24. [Splunk](pulsar-connectors/splunk)
+25. [XTDB](pulsar-connectors/xtdb)
+26. [Zeebe](pulsar-connectors/zeebe)
 
 The rest of this documentation will dive into details of:
 
@@ -154,11 +155,12 @@ in `shaded-dependencies/<connector name>/pom.xml`and build (`mvn clean install`)
 
 ### 2. Add new subproject
 
-Copy `pulsar-connectors/template/` to `pulsar-connectors/<connector name>/`, and add the new module into `pulsar-connectors/pom.xml`.
-
-Update connector's name and description in `pulsar-connectors/<connector name>/src/main/resources/META-INF/services/pulsar-io.yaml`
-
-Update the `pulsar-connectors/<connector name>/README.md`.
-
-Build (`mvn clean install`). Run ` mvn dependency:tree -Dverbose` to review how Maven auto-resolved potential dependency conflicts and fix as needed.
+1. Copy `pulsar-connectors/template/` to `pulsar-connectors/<connector name>/`
+2. Add the new module into `pulsar-connectors/pom.xml`
+3. Update connector's name and description in `pulsar-connectors/<connector name>/src/main/resources/META-INF/services/pulsar-io.yaml`
+4. Update the `pulsar-connectors/<connector name>/README.md`
+5. Update the root `README.md`
+6. Update `LICENSE` and `NOTICE` files
+7. Build (`mvn clean install`). 
+8. Run `mvn dependency:tree -Dverbose` to review how Maven auto-resolved potential dependency conflicts and fix as needed
 
