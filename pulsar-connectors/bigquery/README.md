@@ -2,7 +2,7 @@
 
 Name : Google BigQuery Sink Connector
 
-Original Developer: WePay
+Original Developer: WePay and Confluent
 
 Link to Github: https://github.com/confluentinc/kafka-connect-bigquery
 

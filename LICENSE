@@ -200,3 +200,194 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+---------------------------------------------------------------------------
+
+This product bundles Azure DocumentDB Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/azure-documentdb
+
+---------------------------------------------------------------------------
+
+This product bundles Apache Geode Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/geode
+
+---------------------------------------------------------------------------
+
+This product bundles Apache Kudu Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/kudu
+
+---------------------------------------------------------------------------
+
+This product bundles Apache Phoenix Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/phoenix
+
+---------------------------------------------------------------------------
+
+This product bundles Apache PLC4X Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/plc4x
+
+---------------------------------------------------------------------------
+
+This product bundles CoAP Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/coap
+
+---------------------------------------------------------------------------
+
+This product bundles Couchbase Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/couchbase
+
+---------------------------------------------------------------------------
+
+This product bundles DataDog Logs Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/datadog
+
+---------------------------------------------------------------------------
+
+This product bundles Diffusion Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/diffusion
+
+---------------------------------------------------------------------------
+
+This product bundles Google BigQuery Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/bigquery
+
+---------------------------------------------------------------------------
+
+This product bundles Hazelcast Jet Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/hazelcast
+
+---------------------------------------------------------------------------
+
+This product bundles Humio HEC Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/humio
+
+---------------------------------------------------------------------------
+
+This product bundles JMS Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/jms
+
+---------------------------------------------------------------------------
+
+This product bundles Kinetica Connector, which is available under a
+"MIT" license. For details, see pulsar-connectors/kinetica
+
+MIT License
+
+Copyright (c) 2021 Kinetica
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+---------------------------------------------------------------------------
+
+This product bundles MarkLogic Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/marklogic
+
+---------------------------------------------------------------------------
+
+This product bundles MQTT Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/mqtt
+
+---------------------------------------------------------------------------
+
+This product bundles Neo4J Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/neo4j
+
+---------------------------------------------------------------------------
+
+This product bundles New Relic Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/newrelic
+
+---------------------------------------------------------------------------
+
+This product bundles OrientDB Connector, which is available under a
+"MIT" license. For details, see pulsar-connectors/orientdb
+
+MIT License
+
+Copyright (c) 2020 Sanju Thomas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+
+This product bundles Redis Connector, which is available under a
+"MIT" license. For details, see pulsar-connectors/redis
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Jared Petersen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+---------------------------------------------------------------------------
+
+This product bundles SAP HANA Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/sap-hana
+
+---------------------------------------------------------------------------
+
+This product bundles SingleStore Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/singlestore
+
+---------------------------------------------------------------------------
+
+This product bundles Splunk Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/splunk
+
+---------------------------------------------------------------------------
+
+This product bundles XTDB Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/xtdb
+
+---------------------------------------------------------------------------
+
+This product bundles Zeebe Connector, which is available under a
+"Apache 2.0" license. For details, see pulsar-connectors/zeebe
+
+---------------------------------------------------------------------------
