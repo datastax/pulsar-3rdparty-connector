@@ -28,6 +28,7 @@
   <name>3rd Party :: Pulsar Connectors</name>
   <modules>
     <module>azure-documentdb</module>
+    <module>azure-kusto</module>
     <module>bigquery</module>
     <module>coap</module>
     <module>couchbase</module>
