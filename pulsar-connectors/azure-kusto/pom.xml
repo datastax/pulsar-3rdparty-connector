@@ -25,6 +25,16 @@
   </parent>
   <artifactId>${project.parent.artifactId}-azure-kusto</artifactId>
   <name>Azure Data Explorer (Kusto) Connector for Apache Pulsar</name>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>net.minidev</groupId>
+        <artifactId>json-smart</artifactId>
+        <!-- up from 2.3. to fix CVE-2021-27568 -->
+        <version>2.3.1</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>

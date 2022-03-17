@@ -35,7 +35,7 @@
     <module>pulsar-connectors</module>
   </modules>
   <properties>
-    <!-- org.apache.pulsar (and matching pulsar.version) fro OSS -->
+    <!-- org.apache.pulsar (and matching pulsar.version) for OSS -->
     <pulsar.distribution-name>com.datastax.oss</pulsar.distribution-name>
     <!--
     Versions matching pulsar 2.9-snapshot
@@ -54,7 +54,7 @@
     <skipSourceReleaseAssembly>false</skipSourceReleaseAssembly>
     <shadePluginPhase>package</shadePluginPhase>
     <narPluginPhase>package</narPluginPhase>
-    <pulsar.version>2.8.0.1.1.24</pulsar.version>
+    <pulsar.version>2.8.0.1.1.27</pulsar.version>
     <commons-compress.version>1.21</commons-compress.version>
     <bookkeeper.version>4.14.2</bookkeeper.version>
     <zookeeper.version>3.6.3</zookeeper.version>
@@ -63,8 +63,8 @@
     <dropwizardmetrics.version>3.2.5</dropwizardmetrics.version>
     <!-- ZooKeeper server -->
     <curator.version>5.1.0</curator.version>
-    <netty.version>4.1.67.Final</netty.version>
-    <netty-tc-native.version>2.0.40.Final</netty-tc-native.version>
+    <netty.version>4.1.74.Final</netty.version>
+    <netty-tc-native.version>2.0.48.Final</netty-tc-native.version>
     <jetty.version>9.4.43.v20210629</jetty.version>
     <conscrypt.version>2.5.2</conscrypt.version>
     <jersey.version>2.34</jersey.version>
@@ -84,7 +84,7 @@
     <puppycrawl.checkstyle.version>8.37</puppycrawl.checkstyle.version>
     <dockerfile-maven.version>1.4.13</dockerfile-maven.version>
     <typetools.version>0.5.0</typetools.version>
-    <protobuf3.version>3.11.4</protobuf3.version>
+    <protobuf3.version>3.16.1</protobuf3.version>
     <protoc3.version>${protobuf3.version}</protoc3.version>
     <grpc.version>1.33.0</grpc.version>
     <perfmark.version>0.19.0</perfmark.version>
@@ -1314,6 +1314,59 @@ limitations under the License.]]></inlineHeader>
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+      <id>owasp-dependency-check</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>${dependency-check-maven.version}</version>
+            <configuration>
+              <suppressionFiles>
+                <suppressionFile>src/owasp-dependency-check-suppressions.xml</suppressionFile>
+              </suppressionFiles>
+              <failBuildOnCVSS>7</failBuildOnCVSS>
+              <msbuildAnalyzerEnabled>false</msbuildAnalyzerEnabled>
+              <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
+              <yarnAuditAnalyzerEnabled>false</yarnAuditAnalyzerEnabled>
+              <pyDistributionAnalyzerEnabled>false</pyDistributionAnalyzerEnabled>
+              <pyPackageAnalyzerEnabled>false</pyPackageAnalyzerEnabled>
+              <pipAnalyzerEnabled>false</pipAnalyzerEnabled>
+              <pipfileAnalyzerEnabled>false</pipfileAnalyzerEnabled>
+              <retireJsAnalyzerEnabled>false</retireJsAnalyzerEnabled>
+              <msbuildAnalyzerEnabled>false</msbuildAnalyzerEnabled>
+              <mixAuditAnalyzerEnabled>false</mixAuditAnalyzerEnabled>
+              <nugetconfAnalyzerEnabled>false</nugetconfAnalyzerEnabled>
+              <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>aggregate</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+      <reporting>
+        <plugins>
+          <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>${dependency-check-maven.version}</version>
+            <reportSets>
+              <reportSet>
+                <reports>
+                  <report>aggregate</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+          </plugin>
+        </plugins>
+      </reporting>
     </profile>
   </profiles>
   <repositories>
