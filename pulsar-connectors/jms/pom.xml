@@ -25,6 +25,35 @@
   </parent>
   <artifactId>${project.parent.artifactId}-jms</artifactId>
   <name>JMS Connector for Apache Pulsar</name>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.11</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.2.11</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-jmx</artifactId>
+        <version>${jetty.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-jaas</artifactId>
+        <version>${jetty.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.jetty.websocket</groupId>
+        <artifactId>javax-websocket-server-impl</artifactId>
+        <version>${jetty.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -50,6 +79,12 @@
       <groupId>com.github.lensesio.stream-reactor</groupId>
       <artifactId>kafka-connect-jms</artifactId>
       <version>3.0.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId/>
+          <artifactId/>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
