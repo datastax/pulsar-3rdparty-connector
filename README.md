@@ -164,3 +164,8 @@ in `shaded-dependencies/<connector name>/pom.xml`and build (`mvn clean install`)
 7. Build (`mvn clean install`). 
 8. Run `mvn dependency:tree -Dverbose` to review how Maven auto-resolved potential dependency conflicts and fix as needed
 
+To check the connector for CVEs:
+```shell
+mvn clean install verify -Powasp-dependency-check -DskipTests -f pulsar-connectors/<connector dir>/pom.xml
+```
+Detailed report will be at `pulsar-connectors/<connector dir>/target/dependency-check-report.html`
