@@ -79,12 +79,6 @@
       <groupId>com.github.lensesio.stream-reactor</groupId>
       <artifactId>kafka-connect-jms</artifactId>
       <version>3.0.1</version>
-      <exclusions>
-        <exclusion>
-          <groupId/>
-          <artifactId/>
-        </exclusion>
-      </exclusions>
     </dependency>
   </dependencies>
   <build>
