@@ -52,6 +52,11 @@
         <artifactId>javax-websocket-server-impl</artifactId>
         <version>${jetty.version}</version>
       </dependency>
+      <dependency>
+        <groupId>io.github.classgraph</groupId>
+        <artifactId>classgraph</artifactId>
+        <version>4.8.116</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>

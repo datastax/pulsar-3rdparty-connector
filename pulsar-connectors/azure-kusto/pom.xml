@@ -30,8 +30,8 @@
       <dependency>
         <groupId>net.minidev</groupId>
         <artifactId>json-smart</artifactId>
-        <!-- up from 2.3. to fix CVE-2021-27568 -->
-        <version>2.3.1</version>
+        <!-- up from 2.4.7 to fix CVE-2021-27568 and CVE-2021-31684 -->
+        <version>2.4.7</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
