@@ -79,8 +79,8 @@
     <log4j2.version>2.17.1</log4j2.version>
     <bouncycastle.version>1.69</bouncycastle.version>
     <bouncycastlefips.version>1.0.2</bouncycastlefips.version>
-    <jackson.version>2.12.6</jackson.version>
-    <jackson.databind.version>2.12.6</jackson.databind.version>
+    <!--same as 2.12.6 with jackson-databind 2.12.6.1-->
+    <jackson.version>2.12.6.20220326</jackson.version>
     <reflections.version>0.9.11</reflections.version>
     <swagger.version>1.6.2</swagger.version>
     <puppycrawl.checkstyle.version>8.37</puppycrawl.checkstyle.version>
