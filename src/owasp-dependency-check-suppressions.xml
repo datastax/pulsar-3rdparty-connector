@@ -39,24 +39,21 @@
     <sha1>89b6aadcea7cb3fe6b626163dff227c83be68311</sha1>
     <cve>CVE-2021-43045</cve>
   </suppress>
-
   <!-- wire-schema matched against various "wire" named apps -->
   <suppress>
-     <notes><![CDATA[
+    <notes><![CDATA[
      file name: wire-schema-3.1.0.jar
        ]]></notes>
-     <sha1>44554b4002cf23a93fbd0d771d75b744cc29a671</sha1>
-     <cpe>cpe:/a:wire:wire</cpe>
+    <sha1>44554b4002cf23a93fbd0d771d75b744cc29a671</sha1>
+    <cpe>cpe:/a:wire:wire</cpe>
   </suppress>
   <suppress>
-     <notes><![CDATA[
+    <notes><![CDATA[
      file name: wire-runtime-3.1.0.jar
        ]]></notes>
-     <sha1>e98b01f6f8379eca63bb14b6a554901fa8261568</sha1>
-     <cpe>cpe:/a:wire:wire</cpe>
+    <sha1>e98b01f6f8379eca63bb14b6a554901fa8261568</sha1>
+    <cpe>cpe:/a:wire:wire</cpe>
   </suppress>
-
-
   <!-- netty-tcnative versions (2.x) matched against netty versions (4.x) by owasp -->
   <suppress>
     <notes><![CDATA[
@@ -66,7 +63,7 @@
     <cve>CVE-2015-2156</cve>
     <cve>CVE-2019-16869</cve>
     <cve>CVE-2019-20444</cve>
-    <cve>CVE-2019-20445</cve> 
+    <cve>CVE-2019-20445</cve>
     <cve>CVE-2021-37136</cve>
     <cve>CVE-2021-37137</cve>
   </suppress>
