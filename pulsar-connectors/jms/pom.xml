@@ -81,6 +81,11 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.17.0</version>
+    </dependency>
+    <dependency>
       <groupId>com.github.lensesio.stream-reactor</groupId>
       <artifactId>kafka-connect-jms</artifactId>
       <version>3.0.1</version>
