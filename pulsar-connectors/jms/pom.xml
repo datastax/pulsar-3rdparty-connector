@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-jms</artifactId>
+  <artifactId>pulsar-connectors-jms</artifactId>
   <name>JMS Connector for Apache Pulsar</name>
   <dependencyManagement>
     <dependencies>

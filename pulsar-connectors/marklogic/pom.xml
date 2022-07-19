@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-marklogic</artifactId>
+  <artifactId>pulsar-connectors-marklogic</artifactId>
   <name>MarkLogic Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-singlestore</artifactId>
+  <artifactId>pulsar-connectors-singlestore</artifactId>
   <name>SingleStore Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-geode</artifactId>
+  <artifactId>pulsar-connectors-geode</artifactId>
   <name>Apache Geode Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

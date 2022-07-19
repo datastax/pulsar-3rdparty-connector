@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-orientdb</artifactId>
+  <artifactId>pulsar-connectors-orientdb</artifactId>
   <name>OrientDB Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

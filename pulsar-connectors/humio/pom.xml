@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-humio</artifactId>
+  <artifactId>pulsar-connectors-humio</artifactId>
   <name>Humio HEC Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

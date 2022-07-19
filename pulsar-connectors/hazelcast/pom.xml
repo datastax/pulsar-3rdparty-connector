@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-hazelcast</artifactId>
+  <artifactId>pulsar-connectors-hazelcast</artifactId>
   <name>Hazelcast Jet Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

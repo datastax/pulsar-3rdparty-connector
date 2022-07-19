@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-azure-kusto</artifactId>
+  <artifactId>pulsar-connectors-azure-kusto</artifactId>
   <name>Azure Data Explorer (Kusto) Connector for Apache Pulsar</name>
   <dependencyManagement>
     <dependencies>

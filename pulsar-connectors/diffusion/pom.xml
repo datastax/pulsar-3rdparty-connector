@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-diffusion</artifactId>
+  <artifactId>pulsar-connectors-diffusion</artifactId>
   <name>Diffusion Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>

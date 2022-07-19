@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-bigquery</artifactId>
+  <artifactId>pulsar-connectors-bigquery</artifactId>
   <name>BigQuery Connector</name>
   <dependencies>
     <dependency>

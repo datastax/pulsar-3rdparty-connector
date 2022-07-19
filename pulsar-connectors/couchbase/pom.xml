@@ -23,7 +23,7 @@
     <artifactId>pulsar-connectors</artifactId>
     <version>0.1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>${project.parent.artifactId}-couchbase</artifactId>
+  <artifactId>pulsar-connectors-couchbase</artifactId>
   <name>Couchbase Connector for Apache Pulsar</name>
   <dependencies>
     <dependency>
