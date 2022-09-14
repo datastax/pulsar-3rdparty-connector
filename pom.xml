@@ -51,7 +51,7 @@
     <skipSourceReleaseAssembly>false</skipSourceReleaseAssembly>
     <shadePluginPhase>package</shadePluginPhase>
     <narPluginPhase>package</narPluginPhase>
-    <pulsar.version>2.10.1.1</pulsar.version>
+    <pulsar.version>2.10.1.5</pulsar.version>
     <!--
     Versions matching https://github.com/datastax/pulsar/tree/2.10_ds
     -->
