@@ -21,7 +21,7 @@
   <groupId>com.datastax.oss</groupId>
   <artifactId>pulsar-3rdparty-connectors</artifactId>
   <packaging>pom</packaging>
-  <version>2.10.1.2-SNAPSHOT</version>
+  <version>2.10.1.2</version>
   <name>3rd Party Connectors for Apache Pulsar (R)</name>
   <description>3rd Party Connectors for Apache Pulsar</description>
   <url>https://github.com/datastax/pulsar-3rdparty-connector</url>
@@ -1286,7 +1286,7 @@ limitations under the License.]]></inlineHeader>
     <connection>scm:git:git@github.com:datastax/pulsar-3rdparty-connector.git</connection>
     <developerConnection>scm:git:git@github.com:datastax/pulsar-3rdparty-connector.git</developerConnection>
     <url>https://github.com/datastax/pulsar-3rdparty-connector</url>
-    <tag>HEAD</tag>
+    <tag>v2.10.1.2</tag>
   </scm>
   <developers>
     <developer>

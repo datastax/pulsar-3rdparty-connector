@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.datastax.oss</groupId>
     <artifactId>pulsar-connectors</artifactId>
-    <version>2.10.1.2-SNAPSHOT</version>
+    <version>2.10.1.2</version>
   </parent>
   <artifactId>pulsar-connectors-newrelic</artifactId>
   <name>New Relic Connector for Apache Pulsar</name>
