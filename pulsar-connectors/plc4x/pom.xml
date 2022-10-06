@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.datastax.oss</groupId>
     <artifactId>pulsar-connectors</artifactId>
-    <version>2.10.1.2</version>
+    <version>2.10.1.3-SNAPSHOT</version>
   </parent>
   <artifactId>pulsar-connectors-plc4x</artifactId>
   <name>Apache PLC4X Connector for Apache Pulsar</name>
