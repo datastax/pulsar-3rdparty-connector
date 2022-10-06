@@ -24,7 +24,7 @@
   <version>2.10.1.2-SNAPSHOT</version>
   <name>3rd Party Connectors for Apache Pulsar (R)</name>
   <description>3rd Party Connectors for Apache Pulsar</description>
-  <url>https://github.com/datastax/pulsar-3rdparty-connectors</url>
+  <url>https://github.com/datastax/pulsar-3rdparty-connector</url>
   <inceptionYear>2021</inceptionYear>
   <organization>
     <name>DataStax</name>
@@ -1283,9 +1283,9 @@ limitations under the License.]]></inlineHeader>
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:datastax/pulsar-3rdparty-connectors.git</connection>
-    <developerConnection>scm:git:git@github.com:datastax/pulsar-3rdparty-connectors.git</developerConnection>
-    <url>https://github.com/datastax/pulsar-3rdparty-connectors</url>
+    <connection>scm:git:git@github.com:datastax/pulsar-3rdparty-connector.git</connection>
+    <developerConnection>scm:git:git@github.com:datastax/pulsar-3rdparty-connector.git</developerConnection>
+    <url>https://github.com/datastax/pulsar-3rdparty-connector</url>
     <tag>HEAD</tag>
   </scm>
   <developers>
