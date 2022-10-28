@@ -48,6 +48,7 @@ Added connectors, so far:
 24. [Splunk](pulsar-connectors/splunk)
 25. [XTDB](pulsar-connectors/xtdb)
 26. [Zeebe](pulsar-connectors/zeebe)
+<!--- add new connector modules here --->
 
 The rest of this documentation will dive into details of:
 
