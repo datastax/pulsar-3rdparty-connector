@@ -392,6 +392,11 @@ This product bundles Zeebe Connector, which is available under a
 
 ---------------------------------------------------------------------------
 
+This product bundles Camel Kafka Connectors, which are available under a
+"Apache 2.0" license. For details, see pulsar-connectors/camel-*
+
+---------------------------------------------------------------------------
+
 This product bundles Azure Kusto (Data Explorer) Connector, which is available under a
 "MIT" license. For details, see pulsar-connectors/azure-kusto
 
