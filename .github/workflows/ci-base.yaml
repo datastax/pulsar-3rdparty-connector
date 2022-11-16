@@ -31,5 +31,5 @@ jobs:
              cd "$conn"
              mvn -B clean package
              mvn clean
-             cd ..    
+             cd ../..
           done
