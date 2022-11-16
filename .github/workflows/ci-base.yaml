@@ -28,7 +28,8 @@ jobs:
           mvn -B install -N
           mvn -B install -pl shaded-dependencies
           for conn in pulsar-connectors/*; do
-             if [ ! -d "$conn" || ! -f "${conn}/pom.xml" ]; then continue; fi
+             if [ ! -d "$conn" ]; then continue; fi
+             if [ ! -f "${conn}/pom.xml" ]; then continue; fi
              cd "$conn"
              mvn -B clean package
              mvn clean
