@@ -25,10 +25,10 @@ jobs:
 
       - name: Build and test
         run: |
-	mvn -B install -N
+        mvn -B install -N
         mvn -B install -pl shaded-dependencies
         for conn in pulsar-connectors/*; do
-	   cd "$conn"
+           cd "$conn"
            mvn -B clean package
            mvn clean
            cd ..    
