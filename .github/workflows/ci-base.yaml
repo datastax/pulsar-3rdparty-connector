@@ -26,12 +26,12 @@ jobs:
       - name: Build and test
         run: |
           mvn -B install -N
-          mvn -B install -pl shaded-dependencies
+          mvn -B install -f shaded-dependencies
           for conn in pulsar-connectors/*; do
              if [ ! -d "$conn" ]; then continue; fi
              if [ ! -f "${conn}/pom.xml" ]; then continue; fi
              cd "$conn"
-             mvn -B clean package
-             mvn clean
+             mvn -qB clean package
+             mvn -qB clean
              cd ../..
           done
