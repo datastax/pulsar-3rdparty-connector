@@ -24,4 +24,12 @@ jobs:
         run: mvn -B license:check
 
       - name: Build and test
-        run: mvn -B clean install
+        run: |
+	mvn -B install -N
+        mvn -B install -pl shaded-dependencies
+        for conn in pulsar-connectors/*; do
+	   cd "$conn"
+           mvn -B clean package
+           mvn clean
+           cd ..    
+        done
