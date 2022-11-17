@@ -54,8 +54,8 @@ jobs:
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
              mvn -q -B clean package -f "$conn"
-             mvn -q -B clean -f "$conn"           
              count=$(( $count + 1 ))
+             find ~/.m2/repository -mindepth 1 -maxdepth 1 -type d -not -name com -delete
              echo "Space after $count modules"
              time df -BM / /mnt
              df -h
