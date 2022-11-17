@@ -60,4 +60,6 @@ jobs:
              echo "Space after $count modules"
              time df -BM / /mnt
              df -h
+             ls -lhS /
+             du -sh / || true
           done
