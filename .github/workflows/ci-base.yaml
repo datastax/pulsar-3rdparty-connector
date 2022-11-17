@@ -12,6 +12,7 @@ jobs:
       - name: Verify disk space
         run: |
           time df -BM / /mnt
+          df -h
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
@@ -38,21 +39,24 @@ jobs:
       - name: Build and test
         run: |
           time df -BM / /mnt
+          df -h
           echo "::group::Build parent and shaded deps"
-          mvn -B install -N
-          mvn -B install -f shaded-dependencies
+          mvn -B -q install -N
+          mvn -B -q install -f shaded-dependencies
           echo "::endgroup::"
           time df -BM / /mnt
           mvn -B -q package -f pulsar-connectors/splunk
           mvn -B -q package -f pulsar-connectors/redis
           time df -BM / /mnt
+          df -h
           count=2
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
              mvn -q -B clean package -f "$conn"
              mvn -q -B clean -f "$conn"           
-             count=(( $count + 1 ))
+             count=$(( $count + 1 ))
              echo "Space after $count modules"
              time df -BM / /mnt
+             df -h
           done
