@@ -36,7 +36,7 @@ jobs:
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
-             if [[ "$conn" == *"-camel-"* ]]; then echo "skipping $conn"; continue; fi
+             if [[ "$conn" == *"camel-"* ]]; then echo "skipping $conn"; continue; fi
              mvn -q -B clean package -f "$conn"
           done
   build-camel:
@@ -69,6 +69,6 @@ jobs:
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
-             if [[ "$conn" != *"-camel-"* ]]; then echo "skipping $conn"; continue; fi
+             if [[ "$conn" != *"camel-"* ]]; then echo "skipping $conn"; continue; fi
              mvn -q -B clean package -f "$conn"
           done
