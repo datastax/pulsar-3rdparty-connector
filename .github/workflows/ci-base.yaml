@@ -9,16 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify disk space
-        run: |
-          time df -BM / /mnt
-          df -h
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 512
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
       - uses: actions/checkout@v2
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -37,29 +27,48 @@ jobs:
         run: mvn -B license:check
 
       - name: Build and test
-        run: |
-          time df -BM / /mnt
-          df -h
-          echo "::group::Build parent and shaded deps"
+        run: |                  
           mvn -B -q install -N
           mvn -B -q install -f shaded-dependencies
-          echo "::endgroup::"
-          time df -BM / /mnt
           mvn -B -q package -f pulsar-connectors/splunk
           mvn -B -q package -f pulsar-connectors/redis
-          time df -BM / /mnt
-          df -h
-          count=2
+
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
+             if [[ "$conn" == *"-camel-"* ]]; then echo "skipping $conn"; continue; fi
              mvn -q -B clean package -f "$conn"
-             mvn -q -B clean -f "$conn"
-             count=$(( $count + 1 ))
-             find ~/.m2/repository -mindepth 1 -maxdepth 1 -type d -not -name com -exec echo rm -rf '{}' \;
-             echo "Space after $count modules"
-             time df -BM / /mnt
-             df -h
-             ls -lhS /
-             du -sh / || true
+          done
+  build-camel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: License check
+        run: mvn -B license:check
+
+      - name: Build and test
+        run: |                  
+          mvn -B -q install -N
+          mvn -B -q install -f shaded-dependencies
+          mvn -B -q package -f pulsar-connectors/splunk
+          mvn -B -q package -f pulsar-connectors/redis
+
+          for conn in pulsar-connectors/*; do
+             if [[ ! -d "$conn" ]]; then continue; fi
+             if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
+             if [[ "$conn" != *"-camel-"* ]]; then echo "skipping $conn"; continue; fi
+             mvn -q -B clean package -f "$conn"
           done
