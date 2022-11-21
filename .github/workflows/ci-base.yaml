@@ -28,17 +28,22 @@ jobs:
 
       - name: Build and test
         run: |                  
-          mvn -B -q install -N
-          mvn -B -q install -f shaded-dependencies
-          mvn -B -q package -f pulsar-connectors/splunk
-          mvn -B -q package -f pulsar-connectors/redis
-
+          mvn -B install -N
+          mvn -B install -f shaded-dependencies
+          mvn -B package -f pulsar-connectors/splunk
+          mvn -B package -f pulsar-connectors/redis
+          count=2
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
              if [[ "$conn" == *"camel-"* ]]; then echo "skipping $conn"; continue; fi
-             mvn -q -B clean package -f "$conn"
+             mvn -B clean package -f "$conn"
+             count=$(( count + 1 ))
           done
+          if [[ "$count" != "30" ]]; then
+            echo "Expected to build 30 connectors, instead built only $count"
+            exit 1
+          fi
   build-camel:
     runs-on: ubuntu-latest
     steps:
@@ -61,14 +66,17 @@ jobs:
 
       - name: Build and test
         run: |                  
-          mvn -B -q install -N
-          mvn -B -q install -f shaded-dependencies
-          mvn -B -q package -f pulsar-connectors/splunk
-          mvn -B -q package -f pulsar-connectors/redis
-
+          mvn -q install -N
+          mvn -q install -f shaded-dependencies
+          count=0
           for conn in pulsar-connectors/*; do
              if [[ ! -d "$conn" ]]; then continue; fi
              if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
              if [[ "$conn" != *"camel-"* ]]; then echo "skipping $conn"; continue; fi
              mvn -q -B clean package -f "$conn"
+             count=$(( count + 1 ))
           done
+          if [[ "$count" != "164" ]]; then
+            echo "Expected to build 164 connectors, instead built only $count"
+            exit 1
+          fi
