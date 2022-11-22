@@ -23,6 +23,7 @@ jobs:
         
       - uses: ncipollo/release-action@v1
         with:
+          artifactErrorsFailBuild: true
           artifacts: "pulsar-connectors/**/*.nar"
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
@@ -42,5 +43,7 @@ jobs:
           build_camel_connectors
       - uses: ncipollo/release-action@v1
         with:
+          allowUpdates: true
+          artifactErrorsFailBuild: true
           artifacts: "pulsar-connectors/**/*.nar"
           token: ${{ secrets.GITHUB_TOKEN }}
