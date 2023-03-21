@@ -11,6 +11,8 @@ build_base_connectors() {
         if [[ ! -d "$conn" ]]; then continue; fi
         if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
         if [[ "$conn" == *"camel-"* ]]; then echo "skipping $conn"; continue; fi
+        # /template is not in the build
+        if [[ "$conn" == *"/template" ]]; then echo "skipping $conn"; continue; fi
         mvn -B clean package -f "$conn"
         count=$(( count + 1 ))
     done
