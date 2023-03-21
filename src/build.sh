@@ -1,5 +1,5 @@
 #!/bin/bash
-base_connectors_count=29
+base_connectors_count=28
 camel_connectors_count=164
 build_base_connectors() {
     mvn -B install -N
