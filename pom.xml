@@ -44,14 +44,14 @@
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <redirectTestOutputToFile>true</redirectTestOutputToFile>
-    <test.additional.args />
+    <test.additional.args/>
     <testReuseFork>true</testReuseFork>
     <testForkCount>4</testForkCount>
     <testRetryCount>1</testRetryCount>
     <skipSourceReleaseAssembly>false</skipSourceReleaseAssembly>
     <shadePluginPhase>package</shadePluginPhase>
     <narPluginPhase>package</narPluginPhase>
-    <pulsar.version>2.10.2.5</pulsar.version>
+    <pulsar.version>2.10.4.0</pulsar.version>
     <camel-connectors.version>3.18.2</camel-connectors.version>
     <!--
     Versions matching https://github.com/datastax/pulsar/tree/2.10_ds
@@ -324,7 +324,7 @@
       <dependency>
         <groupId>com.datastax.oss</groupId>
         <artifactId>bookkeeper-server</artifactId>
-        <version />
+        <version/>
         <exclusions>
           <exclusion>
             <groupId>org.bouncycastle</groupId>
