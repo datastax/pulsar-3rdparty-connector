@@ -20,14 +20,14 @@
   <!-- add suppressions for known vulnerabilities detected by OWASP Dependency Check -->
   <suppress>
     <notes><![CDATA[
-    file name: avro-1.10.2.jar
+    file name: avro-1.11.4.jar
     ]]></notes>
     <sha1>a65aaa91c1aeceb3dd4859dbb9765d1c2063f5a2</sha1>
     <cve>CVE-2021-43045</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
-    file name: avro-protobuf-1.10.2.jar
+    file name: avro-protobuf-1.11.4.jar
     ]]></notes>
     <sha1>fbcacef6dd7f2d9864d56dfd5fb54096f59c5e17</sha1>
     <cve>CVE-2021-43045</cve>
