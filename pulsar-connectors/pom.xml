@@ -27,21 +27,21 @@
   <artifactId>pulsar-connectors</artifactId>
   <name>3rd Party :: Pulsar Connectors</name>
   <modules>
-    <module>azure-documentdb</module>
+    <!--module>azure-documentdb</module-->
     <module>azure-kusto</module>
     <module>bigquery</module>
-    <module>coap</module>
+    <!--module>coap</module-->
     <module>couchbase</module>
     <module>datadog</module>
     <module>diffusion</module>
     <module>geode</module>
     <module>hazelcast</module>
     <module>humio</module>
-    <module>jms</module>
+    <!--module>jms</module-->
     <module>kinetica</module>
-    <module>kudu</module>
+    <!--module>kudu</module-->
     <module>marklogic</module>
-    <module>mqtt</module>
+    <!--module>mqtt</module-->
     <module>neo4j</module>
     <module>newrelic</module>
     <module>orientdb</module>
