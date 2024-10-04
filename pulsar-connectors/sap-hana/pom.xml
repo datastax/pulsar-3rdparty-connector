@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.datastax.oss</groupId>
     <artifactId>pulsar-connectors</artifactId>
-    <version>2.10.1.8</version>
+    <version>2.10.1.9-SNAPSHOT</version>
   </parent>
   <artifactId>pulsar-connectors-sap-hana</artifactId>
   <name>SAP HANA Connector for Apache Pulsar</name>
