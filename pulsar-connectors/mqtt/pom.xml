@@ -47,9 +47,9 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>com.github.lensesio.stream-reactor</groupId>
-      <artifactId>kafka-connect-mqtt</artifactId>
-      <version>3.0.1</version>
+      <groupId>com.github.lensesio</groupId>
+      <artifactId>stream-reactor</artifactId>
+      <version>8.1.11</version>
     </dependency>
   </dependencies>
   <build>
