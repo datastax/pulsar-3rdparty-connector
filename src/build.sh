@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 base_connectors_count=28
 camel_connectors_count=164
 build_base_connectors() {
@@ -8,6 +9,7 @@ build_base_connectors() {
     mvn -B package -f pulsar-connectors/redis
     count=2
     for conn in pulsar-connectors/*; do
+        echo "$conn"
         if [[ ! -d "$conn" ]]; then continue; fi
         if [[ ! -f "${conn}/pom.xml" ]]; then continue; fi
         if [[ "$conn" == *"camel-"* ]]; then echo "skipping $conn"; continue; fi
