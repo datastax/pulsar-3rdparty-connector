@@ -25,6 +25,12 @@
   </parent>
   <artifactId>pulsar-connectors-coap</artifactId>
   <name>CoAP Connector for Apache Pulsar</name>
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -49,7 +55,7 @@
     <dependency>
       <groupId>com.github.lensesio</groupId>
       <artifactId>stream-reactor</artifactId>
-      <version>8.1.10</version>
+      <version>8.1.13</version>
     </dependency>
   </dependencies>
   <build>
