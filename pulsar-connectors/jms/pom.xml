@@ -86,9 +86,9 @@
       <version>5.17.0</version>
     </dependency>
     <dependency>
-      <groupId>com.github.lensesio.stream-reactor</groupId>
+      <groupId>com.github.dlg99.stream-reactor</groupId>
       <artifactId>kafka-connect-jms</artifactId>
-      <version>3.0.1</version>
+      <version>faf419206b</version>
     </dependency>
   </dependencies>
   <build>

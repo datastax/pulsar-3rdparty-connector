@@ -47,9 +47,9 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>com.github.lensesio.stream-reactor</groupId>
+      <groupId>com.github.dlg99.stream-reactor</groupId>
       <artifactId>kafka-connect-kudu</artifactId>
-      <version>3.0.1</version>
+      <version>faf419206b</version>
     </dependency>
   </dependencies>
   <build>
