@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.datastax.oss</groupId>
     <artifactId>pulsar-connectors</artifactId>
-    <version>2.10.1.12</version>
+    <version>2.10.1.13-SNAPSHOT</version>
   </parent>
   <artifactId>camel-jira-update-issue-sink</artifactId>
   <name>camel-jira-update-issue-sink Connector for Apache Pulsar</name>
