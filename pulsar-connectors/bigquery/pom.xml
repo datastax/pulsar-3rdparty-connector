@@ -26,7 +26,7 @@
   <artifactId>pulsar-connectors-bigquery</artifactId>
   <name>BigQuery Connector</name>
   <properties>
-    <kafa.connector.adaptor.version>3.1.4.23</kafa.connector.adaptor.version>
+    <kafa.connector.adaptor.version>4.0.7.6</kafa.connector.adaptor.version>
   </properties>
   <dependencies>
     <dependency>
